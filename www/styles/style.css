@@ -50,6 +50,18 @@ hr {
     border-radius: 3px
 }
 
+#page-wrap:after {
+    content: "";
+    display: block
+}
+
+footer, #page-wrap:after {height: 10px}
+
+#page-wrap {
+    min-height: 93.6%;
+    margin-bottom: -10px
+}
+
 /* Главная часть */
 
 #wrapper {
@@ -57,10 +69,45 @@ hr {
     width: 100%
 }
 
-#wrapper article {
-    float: left;
+#wrapper aside {
+    padding: 1em;
+    height: 100%;
+    width: 20%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+#wrapper article.flb, article.news {
+    height: 100%;
     width: 80%;
-    margin-left: 10%
+    margin-right: 1%;
+    padding: 1em;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 1%
+}
+
+/* NEWS строка */
+
+article.news {
+    width: 95.5%;
+    font-size: 1.2em;
+    color: green;
+    margin-left: 1%
+}
+
+#cl-bt {
+    margin-right: 2%;
+    padding: 2px;
+    border: 1px solid green;
+    border-radius: 10px
+}
+
+#cl-bt:hover {
+    border: 1px solid red;
+    background: silver
 }
 
 div.logo-head {
@@ -87,14 +134,20 @@ div.menu-head {
     font-size: 1.4em
 }
 
-.menu-head a:hover,
-.saz_icon:hover {
+#shopping-cart-a:after {
+    content: " 🛍";
+    font-size: 1.4em
+}
+
+.menu-head a:hover {
     background-color: rgba(0, 0, 0, 0.1)
 }
 
 .saz_icon img {
     height: auto;
     width: 100%;
+    margin-bottom: 10%;
+    border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -104,19 +157,20 @@ div.menu-head {
 }
 
 .saz_icon {
-    padding: 1%;
-    margin: 1%;
+    padding: 0.5em;
+    margin: 0.5%;
     float: left;
-    width: 48%;
-    max-width: 240px;
+    width: 24%;
     min-width: 180px;
+    min-height: 20em;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    border: 1px solid green;
     border-radius: 10px;
     color: #333;
     font-size: 1em;
     font-family: "Segoe UI", sans-serif;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 255, 0, 0.2);
     transition: all.6s ease;
     -moz-transition: all.6s ease;
     -webkit-transition: all.6s ease;
@@ -124,7 +178,8 @@ div.menu-head {
 }
 
 .saz_icon:hover {
-    color: #fff
+    color: #fff;
+    background-color: rgba(0, 120, 0, 0.6)
 }
 
 /* Ссылки */
@@ -148,8 +203,7 @@ a {
     -ms-transition: all.6s ease
 }
 
-a:hover,
-a:visited:hover {
+a:hover {
     color: #0031ff;
     text-decoration: none;
     transition: all.6s ease;
@@ -159,10 +213,6 @@ a:visited:hover {
 }
 
 a:active {
-    color: #eb6d00
-}
-
-a:visited {
     color: #eb6d00
 }
 
