@@ -37,8 +37,9 @@ body {
     color: #333;
     font-size: 1em;
     font-family: "Segoe UI", sans-serif;
-    line-height: 135%;
-    background: url(../img/sadovod.png) no-repeat center top fixed #b2b2b2
+    line-height: 1.4;
+    background: url(../img/sadovod.png) no-repeat center center fixed #b2b2b2;
+    background-size: cover
 }
 
 hr {
@@ -55,11 +56,41 @@ hr {
     display: block
 }
 
-footer, #page-wrap:after {height: 10px}
+footer,
+#page-wrap:after {
+    height: 10px
+}
 
 #page-wrap {
     min-height: 93.6%;
     margin-bottom: -10px
+}
+
+/* flex */
+
+.page-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+
+
+
+
+div.flex-cont {
+    margin-top: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
 }
 
 /* Главная часть */
@@ -71,19 +102,16 @@ footer, #page-wrap:after {height: 10px}
 
 #wrapper aside {
     padding: 1em;
-    height: 100%;
-    width: 20%;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.5);
     margin-left: 1%;
-    margin-top: 1%;
+    margin-top: 1%
 }
 
-#wrapper article.flb, article.news {
-    height: 100%;
-    width: 80%;
+#wrapper article.flb,
+article.news {
     margin-right: 1%;
-    padding: 1em;
+    padding: 2%;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.5);
     margin-top: 1%
@@ -92,7 +120,7 @@ footer, #page-wrap:after {height: 10px}
 /* NEWS строка */
 
 article.news {
-    width: 95.5%;
+    width: 94%;
     font-size: 1.2em;
     color: green;
     margin-left: 1%
@@ -110,9 +138,7 @@ article.news {
     background: silver
 }
 
-div.logo-head {
-    margin-top: 1%
-}
+
 
 div.menu-head {
     margin-top: 1%;
@@ -124,24 +150,43 @@ div.menu-head {
     justify-content: space-around;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .menu-head a {
-    border-radius: 5px;
-    padding: 5px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 0, 0, 0);
+    padding: 1px 15px;
     font-family: Comic Sans MS, sans-serif;
     font-size: 1.4em
 }
 
+.menu-head span {
+    margin: 5px 0 5px;
+    white-space: nowrap
+}
+
 #shopping-cart-a:after {
-    content: " 🛍";
-    font-size: 1.4em
+    content: " 🛍"
 }
 
 .menu-head a:hover {
+    border: 1px solid;
     background-color: rgba(0, 0, 0, 0.1)
 }
+
+.saz_icon a {
+    color: #333;
+    font-size: 1em;
+    font-family: "Segoe UI", sans-serif
+}
+
+.saz_icon a:hover {
+    color: #fff
+}
+
 
 .saz_icon img {
     height: auto;
@@ -158,18 +203,17 @@ div.menu-head {
 
 .saz_icon {
     padding: 0.5em;
-    margin: 0.5%;
-    float: left;
-    width: 24%;
+    max-width: 24%;
     min-width: 180px;
     min-height: 20em;
+    margin-bottom: 2%;
+    color: #333;
+    font-size: 1em;
+    font-family: "Segoe UI", sans-serif;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid green;
     border-radius: 10px;
-    color: #333;
-    font-size: 1em;
-    font-family: "Segoe UI", sans-serif;
     background-color: rgba(0, 255, 0, 0.2);
     transition: all.6s ease;
     -moz-transition: all.6s ease;
@@ -178,8 +222,8 @@ div.menu-head {
 }
 
 .saz_icon:hover {
-    color: #fff;
-    background-color: rgba(0, 120, 0, 0.6)
+    background-color: rgba(0, 120, 0, 0.6);
+    color: #fff
 }
 
 /* Ссылки */
@@ -187,6 +231,7 @@ div.menu-head {
 input[type=text].field {
     border: 2px solid silver;
     border-radius: 5px;
+    margin-bottom: 10px;
     padding: 5px
 }
 
@@ -262,6 +307,13 @@ li:before {
 
 li {
     list-style: none;
+    white-space: nowrap
 }
 
 .product-categories {}
+
+.flb {
+    margin-left: 1%
+}
+
+
